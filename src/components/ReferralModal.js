@@ -20,9 +20,9 @@ const ReferralModal = ({ show, onClose }) => {
   };
   //To handle after submit 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     try {
-      const response = await axios.post('/api/referral', formData);
+      const response = await axios.post(`https://accredian-backend-13ft.onrender.com/api/referral`, formData);
       console.log('Referral submitted successfully:', response.data);
       alert('Referral submitted successfully!');
     } catch (error) {
